@@ -1,0 +1,50 @@
+# Ignore arquivos compilados do Java
+*.class
+
+# Ignore pacotes
+*.jar
+*.war
+*.ear
+
+# Arquivos de log
+*.log
+
+# Ignore as configurações do diretório do build (Maven, Gradle, etc.)
+/target/
+/build/
+
+# Configurações do Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Ignore configurações do Gradle
+.gradle
+build/
+
+# Arquivos do Eclipse
+.project
+.classpath
+/.settings/
+/bin/
+/tmp/
+
+# Arquivos do IntelliJ IDEA
+*.iml
+*.iws
+.idea/
+out/
+
+# Arquivos do NetBeans
+nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+/exercicios/Aula03/nbproject/private/
