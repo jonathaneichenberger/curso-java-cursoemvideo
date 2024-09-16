@@ -1,5 +1,5 @@
 public class Livro
-implements Publicacao{
+implements Publicacao {
     private String titulo;
     private String autor;
     private int totPaginas;
@@ -8,14 +8,14 @@ implements Publicacao{
     private Pessoa leitor;
 
     public String detalhes() {
-        return "Livro{" +
-                "titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
-                ", totPaginas=" + totPaginas +
-                ", pagAtual=" + pagAtual +
-                ", aberto=" + aberto +
-                ", leitor=" + leitor +
-                '}';
+        return "titulo = " + titulo +
+                "\nautor = " + autor +
+                "\nTotal de Páginas = " + totPaginas +
+                "\nPágina Atual = " + pagAtual +
+                "\nEstá aberto? = " + aberto +
+                "\nLeitor = " + leitor.getNome() +
+                "\nIdade = " + leitor.getIdade() +
+                "\nSexo = " + leitor.getSexo();
     }
 
     public Livro(String titulo, String autor, int totPaginas, Pessoa leitor) {
@@ -25,6 +25,7 @@ implements Publicacao{
         this.aberto = false;
         this.pagAtual = 0;
         this.leitor = leitor;
+
     }
 
     public String getTitulo() {
@@ -87,7 +88,11 @@ implements Publicacao{
 
     @Override
     public void folhear(int pagina) {
-        this.pagAtual = pagina;
+        if(pagina > totPaginas) {
+            this.pagAtual = 0;
+        } else {
+            this.pagAtual = pagina;
+        }
     }
 
     @Override

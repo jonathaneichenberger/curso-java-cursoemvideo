@@ -11,6 +11,9 @@ public class Main {
         l[1] = new Livro("Poo para iniciantes", "Pedro Paulo", 500, p[1]);
         l[2] = new Livro("Java Anvançado", "Maria Candido", 800, p[0]);
 
+        l[0].abrir();
+        l[0].folhear(100);
+        l[0].avancarPag();
         System.out.println(l[0].detalhes());
     }
 }
